@@ -1,7 +1,7 @@
 import React from "react"
 
 export default () => {
-    return(
+    return (
         <div>
             <h2> Segundo Componente</h2>
         </div>
