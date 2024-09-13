@@ -9,14 +9,29 @@ import Primeiro from './componentes/Primeiro'
 import Pessoas from './componentes/Pessoas'
 import Produtos01 from './componentes/Produtos01'
 import Input from './componentes/formulario/Input'
+import ComunicacaoDiretaPai from './componentes/ComunicacaoDiretaPai'
+import ComunicacaoIndiretaPai from './componentes/ComunicacaoIndiretaPai'
+
 
 function App() {
 
   return (
     <>
-    <Card titulo='Input Formulário' cor='#FFC0CB'>
+      <Card titulo='Input Formulário' cor='#FFC0CB'>
+        <Input
+          tipo='number'
+          nome='valorUnitario'
+          classe='input'
+          etiqueta='informe o valor Unitário'
+        ></Input>
 
-    </Card>
+      </Card>
+      <Card titulo='Comunicação indireta' cor='#D8BFD8'>
+        <ComunicacaoIndiretaPai></ComunicacaoIndiretaPai>
+      </Card>
+      <Card titulo="Comunicação Direta" cor="#4682B4">
+        <ComunicacaoDiretaPai nome='Lilly' idade={17} ativo={true}></ComunicacaoDiretaPai>
+      </Card>
 
       <Card titulo='Lista Produtos' cor='#6A5ACD'>
         <Produtos01></Produtos01>
@@ -41,7 +56,7 @@ function App() {
       </Card>
 
       <Card titulo='Componente com Parâmetro' cor='#FFB6C1'>
-        <ComponenteComParametro nome='Maria Flor' idade={48} renda={500.00} />
+        <ComponenteComParametro nome='Lilly' idade={48} renda={500.00} />
       </Card>
 
       <Card titulo='Segundo Componente' cor='#87CEFA'>
